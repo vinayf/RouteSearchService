@@ -5,7 +5,7 @@ cd $(dirname $0)
 
 dev_build() {
   # Do what you need to package your app, e.g. mvn package
-  mvn clean package
+  mvn package
   true
 }
 
