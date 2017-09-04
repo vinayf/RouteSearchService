@@ -34,7 +34,8 @@ _run_smoke() {
 }
 
 docker_build() {
-  docker build -t goeuro:devtest .
+  mvn clean
+  docker build -t goeuro:devtest --build-arg CACHEBUST=$(date +%s) .
 }
 
 docker_run() {
